@@ -191,7 +191,12 @@ public final class MeasureHelper {
                     width = height * realWidth / mVideoHeight;
                 } else if (realWidth * height > width * mVideoHeight) {
                     //Log.i("@@@", "image too tall, correcting");
-                    height = width * mVideoHeight / realWidth;
+                    //height = width * mVideoHeight / realWidth;
+                    if(mVideoWidth>mVideoHeight){
+                        height = width * mVideoHeight / realWidth;
+                    }else{
+                        height = height;
+                    }
                 }
             } else if (widthSpecMode == View.MeasureSpec.EXACTLY) {
                 // only the width is fixed, adjust the height to match aspect ratio if possible
