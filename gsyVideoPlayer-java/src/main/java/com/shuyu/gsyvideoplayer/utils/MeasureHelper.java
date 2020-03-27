@@ -188,7 +188,7 @@ public final class MeasureHelper {
                 // for compatibility, we adjust size based on aspect ratio
                 if (realWidth * height < width * mVideoHeight) {
                     //Log.i("@@@", "image too wide, correcting");
-                    width = height * realWidth / mVideoHeight;
+                    width = width;
                 } else if (realWidth * height > width * mVideoHeight) {
                     //Log.i("@@@", "image too tall, correcting");
                     //height = width * mVideoHeight / realWidth;
